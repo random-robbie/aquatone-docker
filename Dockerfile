@@ -4,5 +4,5 @@ WORKDIR /
 # Prepare
 RUN apt-get update
 RUN apt-get dist-upgrade -y
-RUN apt-get install -y -u apt-utils unzip nodejs upstart wget curl cron nano
+RUN apt-get install -y -u apt-utils unzip nodejs upstart wget curl cron nano xvfb
 RUN gem install aquatone
