@@ -2,4 +2,4 @@
 Docker Version of Aquatone
 
 Latest Version
-4.1
+5.0
