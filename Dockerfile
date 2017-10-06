@@ -9,7 +9,7 @@ RUN apt-get dist-upgrade -y
 RUN apt-get install -y -u apt-utils unzip nodejs wget curl jruby nano screen htop openssl git
 
 # Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
 # Installing the packages needed to run Nightmare
