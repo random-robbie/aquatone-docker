@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get dist-upgrade -y
 
 # Install normal Packages needed
-RUN apt-get install -y -u apt-utils unzip nodejs wget curl jruby nano screen htop openssl git
+RUN apt-get install -y -u apt-utils unzip wget curl jruby nano screen htop openssl git
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
