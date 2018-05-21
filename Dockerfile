@@ -3,17 +3,19 @@ WORKDIR /
 
 # Prepare
 RUN apt-get update
+RUN apt-get install --fix-missing
 RUN apt-get dist-upgrade -y
-
+RUN apt-get update --fix-missing
 # Install normal Packages needed
-RUN apt-get install -y -u apt-utils unzip wget curl jruby nano screen htop openssl git
+RUN apt-get install -f -y -u apt-utils unzip wget curl jruby nano screen htop openssl git
+
 
 # Install nodejs
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 
 # Installing the packages needed to run Nightmare
-RUN apt-get install -y \
+RUN apt-get install -f -y \
   xvfb \
   x11-xkb-utils \
   xfonts-100dpi \
